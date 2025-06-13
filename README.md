@@ -1,147 +1,111 @@
+Berikut versi **rapi dan bersih** dari README kamu, sudah diformat agar tampil baik di GitHub:
 
-```md
+````md
 # CheskoSlot
 
-CheskoSlot adalah aplikasi yang dibangun menggunakan React Native dan Expo. Aplikasi ini menyediakan berbagai fitur yang memanfaatkan kemampuan React Native dan Expo.
+**CheskoSlot** adalah aplikasi yang dibangun menggunakan **React Native** dan **Expo**. Aplikasi ini menyediakan berbagai fitur yang memanfaatkan kekuatan ekosistem React Native dan Expo untuk pengembangan aplikasi lintas platform.
 
-## Prerequisites
+---
+
+## 🔧 Prasyarat
 
 Sebelum memulai, pastikan Anda telah menginstal:
 
-- [Node.js](https://nodejs.org/) (versi LTS disarankan)
+- [Node.js](https://nodejs.org/) (disarankan versi LTS)
 - [Yarn](https://yarnpkg.com/) (versi terbaru)
 
-## Instalasi
+---
+
+## 🚀 Instalasi
 
 Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 
-1. **Clone repositori ini:**
+1. **Clone repositori:**
    ```bash
    git clone https://github.com/username/cheskoslot.git
    cd cheskoslot
-   ```
+````
 
-2. **Instal dependensi menggunakan Yarn:**
+2. **Instal dependensi dengan Yarn:**
+
    ```bash
    yarn install
    ```
 
-## Menjalankan Proyek
+---
 
-Setelah instalasi selesai, Anda dapat menjalankan proyek dengan perintah berikut:
+## ▶️ Menjalankan Proyek
 
-- Untuk menjalankan aplikasi di perangkat Android:
+Setelah instalasi, Anda dapat menjalankan proyek dengan perintah berikut:
+
+* **Menjalankan di Android:**
+
   ```bash
   yarn android
   ```
 
-- Untuk menjalankan aplikasi di perangkat iOS:
+* **Menjalankan di iOS:**
+
   ```bash
   yarn ios
   ```
 
-- Untuk menjalankan aplikasi di web:
+* **Menjalankan di Web:**
+
   ```bash
   yarn web
   ```
 
-- Untuk memulai server pengembangan:
+* **Memulai server pengembangan (Expo):**
+
   ```bash
   yarn start
   ```
 
-## Skrip yang Tersedia
+---
 
-Berikut adalah skrip yang tersedia dalam proyek ini:
+## 📜 Skrip yang Tersedia
 
-- `start`: Memulai server pengembangan Expo.
-- `reset-project`: Mengatur ulang proyek.
-- `android`: Menjalankan aplikasi di Android.
-- `build:android-debug`: Membangun aplikasi Android dalam mode debug.
-- `build:android-release`: Membangun aplikasi Android dalam mode rilis.
-- `build:android-aab`: Membangun file AAB untuk distribusi.
-- `ios`: Menjalankan aplikasi di iOS.
-- `web`: Menjalankan aplikasi di web.
-- `lint`: Memeriksa kesalahan linting dalam kode.
+Daftar skrip yang tersedia di dalam proyek ini:
 
-## Kontribusi
+| Skrip                   | Deskripsi                                           |
+| ----------------------- | --------------------------------------------------- |
+| `start`                 | Memulai server pengembangan Expo                    |
+| `android`               | Menjalankan aplikasi di Android                     |
+| `ios`                   | Menjalankan aplikasi di iOS                         |
+| `web`                   | Menjalankan aplikasi di Web                         |
+| `lint`                  | Memeriksa kesalahan linting pada kode               |
+| `reset-project`         | Mengatur ulang proyek                               |
+| `build:android-debug`   | Membangun aplikasi Android dalam mode debug         |
+| `build:android-release` | Membangun aplikasi Android dalam mode rilis         |
+| `build:android-aab`     | Membangun Android App Bundle (AAB) untuk distribusi |
 
-Jika Anda ingin berkontribusi pada proyek ini, silakan buat fork repositori ini dan kirimkan pull request.
+---
 
-## Lisensi
+## 🤝 Kontribusi
 
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+Kontribusi sangat disambut! Jika Anda ingin berkontribusi:
 
-``` ```md
-# CheskoSlot
+1. Fork repositori ini
+2. Buat branch fitur: `git checkout -b fitur-baru`
+3. Commit perubahan Anda: `git commit -m 'Tambah fitur baru'`
+4. Push ke branch: `git push origin fitur-baru`
+5. Buat Pull Request
 
-CheskoSlot adalah aplikasi yang dibangun menggunakan React Native dan Expo. Aplikasi ini menyediakan berbagai fitur yang memanfaatkan kemampuan React Native dan Expo.
+---
 
-## Prerequisites
-
-Sebelum memulai, pastikan Anda telah menginstal:
-
-- [Node.js](https://nodejs.org/) (versi LTS disarankan)
-- [Yarn](https://yarnpkg.com/) (versi terbaru)
-
-## Instalasi
-
-Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
-
-1. **Clone repositori ini:**
-   ```bash
-   git clone https://github.com/username/cheskoslot.git
-   cd cheskoslot
-   ```
-
-2. **Instal dependensi menggunakan Yarn:**
-   ```bash
-   yarn install
-   ```
-
-## Menjalankan Proyek
-
-Setelah instalasi selesai, Anda dapat menjalankan proyek dengan perintah berikut:
-
-- Untuk menjalankan aplikasi di perangkat Android:
-  ```bash
-  yarn android
-  ```
-
-- Untuk menjalankan aplikasi di perangkat iOS:
-  ```bash
-  yarn ios
-  ```
-
-- Untuk menjalankan aplikasi di web:
-  ```bash
-  yarn web
-  ```
-
-- Untuk memulai server pengembangan:
-  ```bash
-  yarn start
-  ```
-
-## Skrip yang Tersedia
-
-Berikut adalah skrip yang tersedia dalam proyek ini:
-
-- `start`: Memulai server pengembangan Expo.
-- `reset-project`: Mengatur ulang proyek.
-- `android`: Menjalankan aplikasi di Android.
-- `build:android-debug`: Membangun aplikasi Android dalam mode debug.
-- `build:android-release`: Membangun aplikasi Android dalam mode rilis.
-- `build:android-aab`: Membangun file AAB untuk distribusi.
-- `ios`: Menjalankan aplikasi di iOS.
-- `web`: Menjalankan aplikasi di web.
-- `lint`: Memeriksa kesalahan linting dalam kode.
-
-## Kontribusi
-
-Jika Anda ingin berkontribusi pada proyek ini, silakan buat fork repositori ini dan kirimkan pull request.
-
-## Lisensi
+## 📄 Lisensi
 
 Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+
+---
+
+```
+
+### Tips:
+- Pastikan nama `username` di URL git kamu sudah diganti dengan nama akun GitHub kamu.
+- Tambahkan badge (optional) seperti build status, lisensi, atau versi jika perlu.
+- Letakkan file ini sebagai `README.md` di root repositori GitHub.
+
+Kalau kamu ingin saya tambahkan **badge**, **tangkapan layar**, atau bagian **fitur utama**, tinggal bilang!
 ```
