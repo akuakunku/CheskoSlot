@@ -14,9 +14,9 @@ export default function NotFoundScreen() {
         loop
         style={styles.lottie}
       />
-      <Text style={styles.title}>Oops! Halaman tidak ditemukan</Text>
-      <Text style={styles.subtitle}>Mungkin kamu nyasar... 🧭</Text>
-      
+      <Text style={styles.title}>Oops! Halaman tidak ditemukan/Eror</Text>
+      <Text style={styles.subtitle}>Mungkin Kena Block Provider..</Text>
+      <Text style={styles.subtitle}>Coba cari manual di menu search</Text>
     </View>
   );
 }
