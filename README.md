@@ -1,3 +1,4 @@
+Berikut versi **rapi dan bersih** dari README kamu, sudah diformat agar tampil baik di GitHub:
 
 ````md
 # CheskoSlot
