@@ -1,40 +1,63 @@
-import { Link, Stack } from 'expo-router';
-import { StyleSheet } from 'react-native';
-
-import { Text, View } from '@/components/Themed';
+import { Ionicons } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
+import LottieView from 'lottie-react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function NotFoundScreen() {
-  return (
-    <>
-      <Stack.Screen options={{ title: 'Oops!' }} />
-      <View style={styles.container}>
-        <Text style={styles.title}>This screen doesn't exist.</Text>
+  const navigation = useNavigation();
 
-        <Link href="/" style={styles.link}>
-          <Text style={styles.linkText}>Go to home screen!</Text>
-        </Link>
-      </View>
-    </>
+  return (
+    <View style={styles.container}>
+      <LottieView
+        source={require('../assets/images/404-animation.json')} 
+        autoPlay
+        loop
+        style={styles.lottie}
+      />
+      <Text style={styles.title}>Oops! Halaman tidak ditemukan</Text>
+      <Text style={styles.subtitle}>Mungkin kamu nyasar... 🧭</Text>
+      
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
+    backgroundColor: '#121212',
     justifyContent: 'center',
-    padding: 20,
+    alignItems: 'center',
+    paddingHorizontal: 20,
+  },
+  lottie: {
+    width: 250,
+    height: 250,
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
+    color: '#fff',
+    marginTop: 10,
+    textAlign: 'center',
   },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
+  subtitle: {
+    fontSize: 16,
+    color: '#ccc',
+    marginTop: 6,
+    marginBottom: 20,
+    textAlign: 'center',
   },
-  linkText: {
-    fontSize: 14,
-    color: '#2e78b7',
+  button: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#e50914',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 12,
+  },
+  buttonText: {
+    color: '#fff',
+    marginLeft: 8,
+    fontWeight: '600',
   },
 });

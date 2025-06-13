@@ -1,0 +1,51 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Git
+.git/
+.gitignore
+
+# Expo
+.expo/
+.expo-shared/
+dist/
+web-build/
+expo-env.d.ts
+
+# Android / iOS
+android/
+ios/
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# IDE / Editor
+.vscode/
+.idea/
+*.iml
+
+# macOS & system
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+build/
+*.apk
+*.aab
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*.local
+
+# Other
+*.orig.*
+app-example/
