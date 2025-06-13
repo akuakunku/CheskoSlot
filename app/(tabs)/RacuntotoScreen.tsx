@@ -16,7 +16,7 @@ export default function RacuntotoScreen() {
   const fetchUrl = async () => {
     try {
       const res = await axios.get(
-        'https://raw.githubusercontent.com/chesko21/wajik777-webview/refs/heads/master/hooks/config.json'
+        'https://raw.githubusercontent.com/akuakunku/CheskoSlot/refs/heads/master/hooks/config.json'
       );
       const data = res.data;
       if (data?.racuntoto) {

@@ -20,7 +20,7 @@ Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 
 1. **Clone repositori:**
 
-   git clone https://github.com/username/cheskoslot.git
+   git clone https://github.com/akuakunku/CheskoSlot.git
    cd cheskoslot
 
 
