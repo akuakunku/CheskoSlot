@@ -2,7 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import * as FileSystem from "expo-file-system";
 import * as MediaLibrary from "expo-media-library";
 import LottieView from "lottie-react-native";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, forwardRef, useImperativeHandle } from "react";
 import { Alert, BackHandler, StyleSheet, View } from "react-native";
 import Animated, { FadeOut } from "react-native-reanimated";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -10,11 +10,9 @@ import { WebView } from "react-native-webview";
 
 interface Props {
   uri: string;
-  refreshing?: boolean;
-  onRefresh?: () => void;
 }
 
-export default function CustomWebView({ uri }: Props) {
+const CustomWebView = forwardRef(({ uri }: Props, ref) => {
   const webViewRef = useRef<WebView>(null);
   const [canGoBack, setCanGoBack] = useState(false);
   const [webUrl, setWebUrl] = useState(uri);
@@ -24,6 +22,16 @@ export default function CustomWebView({ uri }: Props) {
   const [status, requestPermission] = MediaLibrary.usePermissions();
   const [showLottie, setShowLottie] = useState(true);
   const navigation = useNavigation();
+
+  // Menggunakan useImperativeHandle untuk expose fungsi reload
+  useImperativeHandle(ref, () => ({
+    reload: () => {
+      console.log("Reloading WebView...");
+      if (webViewRef.current) {
+        webViewRef.current.reload();
+      }
+    },
+  }));
 
   const onRefresh = () => {
     setIsRefreshing(true);
@@ -114,6 +122,7 @@ export default function CustomWebView({ uri }: Props) {
 
   const onShouldStartLoadWithRequest = (request: any) => {
     const { url } = request;
+
     if (
       url.endsWith('.pdf') ||
       url.endsWith('.zip') ||
@@ -139,7 +148,7 @@ export default function CustomWebView({ uri }: Props) {
           javaScriptEnabled
           domStorageEnabled
           allowsInlineMediaPlayback
-          mediaPlaybackRequiresUserAction={false}
+          mediaPlaybackRequiresUser Action={false}
           cacheEnabled
           setSupportMultipleWindows={false}
           pullToRefreshEnabled
@@ -202,7 +211,7 @@ export default function CustomWebView({ uri }: Props) {
       </View>
     </SafeAreaView>
   );
-}
+});
 
 const styles = StyleSheet.create({
   safeArea: {
@@ -227,3 +236,5 @@ const styles = StyleSheet.create({
     height: 250,
   },
 });
+
+export default CustomWebView;

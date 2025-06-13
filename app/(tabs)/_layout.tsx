@@ -14,17 +14,18 @@ import SearchingScreen from './SearchingScreen';
 import TotosuperScreen from './TotosuperScreen';
 import TutorialScreen from './TutorialScreen';
 import WajikScreen from './WajikScreen';
+import SojuScreen from './SojuScreen';
 
 const Drawer = createDrawerNavigator();
 const { width } = Dimensions.get('window');
 
 const screenWithRefresh = (label: string, iconName: string) => ({ navigation }) => {
-  const lottieRef = useRef < LottieView > (null);
+  const lottieRef = useRef<LottieView>(null);
 
   const handleRefresh = () => {
     lottieRef.current?.play();
     setTimeout(() => lottieRef.current?.reset(), 1000);
-    navigation.setParams({ refresh: Date.now() });
+    navigation.setParams({ refresh: Date.now() }); 
   };
 
   return {
@@ -39,6 +40,7 @@ const screenWithRefresh = (label: string, iconName: string) => ({ navigation }) 
     ),
   };
 };
+
 
 export default function DrawerLayout() {
   return (
@@ -80,6 +82,11 @@ export default function DrawerLayout() {
           name="Interwin"
           component={InterwinScreen}
           options={screenWithRefresh('Interwin', 'trophy-outline')}
+        />
+         <Drawer.Screen
+          name="Soju88"
+          component={SojuScreen}
+          options={screenWithRefresh('Soju88', 'cash-outline')}
         />
         <Drawer.Screen
           name="SearchingScreen"

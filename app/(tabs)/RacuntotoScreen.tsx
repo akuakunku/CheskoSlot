@@ -8,13 +8,11 @@ const STORAGE_KEY = 'LAST_RACUNTOTO_URL';
 const DEFAULT_URL = 'https://cdndir.b-cdn.net/racuntoto';
 
 export default function RacuntotoScreen() {
-const [uri, setUri] = useState(DEFAULT_URL);
+  const [uri, setUri] = useState(DEFAULT_URL);
   const webViewRef = useRef<CustomWebViewRef>(null);
   const route = useRoute();
   const navigation = useNavigation();
-  const { refresh } = route.params || {};
-  
-  
+
   const fetchUrl = async () => {
     try {
       const res = await axios.get(
@@ -37,9 +35,7 @@ const [uri, setUri] = useState(DEFAULT_URL);
     }
   };
 
- 
-  
-  const handleRefresh = async () => {
+  const handleRefresh = () => {
     if (webViewRef.current) {
       webViewRef.current.reload();
     }

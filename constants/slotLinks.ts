@@ -18,8 +18,8 @@ export const slotLinks = [
     screen: 'PenidamaxWin',
   },
   {
-    uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/480px-No_image_available.svg.png',
-    screen: '',
+    uri: 'https://files.sitestatic.net/ImageFile/63723832233ce_logo%20soju88.png',
+    screen: 'Soju88',
     
   },
   {

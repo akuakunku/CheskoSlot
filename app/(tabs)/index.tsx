@@ -183,7 +183,7 @@ export default function HomeScreen() {
                 style={styles.button}
                 onPress={() => navigation.navigate("Wajik777")}
               >
-                <Text style={styles.buttonText}>🎮 Mainkan Sekarang</Text>
+                <Text style={styles.buttonText}>🎮 Play Wajik777</Text>
               </TouchableOpacity>
             </View>
 

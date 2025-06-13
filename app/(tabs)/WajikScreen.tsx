@@ -1,5 +1,5 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useRoute } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
 import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import CustomWebView, { CustomWebViewRef } from '../components/CustomWebView';
@@ -11,6 +11,7 @@ export default function WajikScreen() {
   const [uri, setUri] = useState(DEFAULT_URL);
   const webViewRef = useRef<CustomWebViewRef>(null);
   const route = useRoute();
+  const navigation = useNavigation();
 
   const fetchUrl = async () => {
     try {
@@ -25,15 +26,14 @@ export default function WajikScreen() {
       } else {
         throw new Error('URL wajik777 tidak ditemukan');
       }
-      
     } catch {
       const lastUrl = await AsyncStorage.getItem(STORAGE_KEY);
       if (lastUrl) setUri(lastUrl);
       else setUri(DEFAULT_URL);
     }
   };
-  
-  const handleRefresh = async () => {
+
+  const handleRefresh = () => {
     if (webViewRef.current) {
       webViewRef.current.reload();
     }

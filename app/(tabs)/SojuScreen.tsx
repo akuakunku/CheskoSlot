@@ -4,10 +4,10 @@ import axios from 'axios';
 import { useEffect, useRef, useState } from 'react';
 import CustomWebView, { CustomWebViewRef } from '../components/CustomWebView';
 
-const STORAGE_KEY = 'LAST_PENIDAMAXWIN_URL';
-const DEFAULT_URL = 'https://penidamaxwin.com/mobile'; 
+const STORAGE_KEY = 'LAST_SOJU_URL';
+const DEFAULT_URL = 'https://soju88d.club/';
 
-export default function PenidamaxWinScreen() {
+export default function SojuScreen() {
   const [uri, setUri] = useState(DEFAULT_URL);
   const webViewRef = useRef<CustomWebViewRef>(null);
   const route = useRoute();
@@ -15,16 +15,18 @@ export default function PenidamaxWinScreen() {
 
   const fetchUrl = async () => {
     try {
-      const res = await axios.get('https://raw.githubusercontent.com/chesko21/wajik777-webview/refs/heads/master/hooks/config.json');
+      const res = await axios.get(
+        'https://raw.githubusercontent.com/chesko21/wajik777-webview/refs/heads/master/hooks/config.json'
+      );
       const data = res.data;
-      if (data?.penidamaxwin) {
-        const cleanUrl = data.penidamaxwin.trim().startsWith("http")
-          ? data.penidamaxwin.trim()
-          : `http://${data.penidamaxwin.trim()}`;
+      if (data?.soju) {
+        const cleanUrl = data.soju.trim().startsWith("http")
+          ? data.soju.trim()
+          : `https://${data.soju.trim()}`;
         setUri(cleanUrl);
         await AsyncStorage.setItem(STORAGE_KEY, cleanUrl);
       } else {
-        throw new Error('URL penidamaxwin tidak ditemukan');
+        throw new Error('URL soju tidak ditemukan');
       }
     } catch {
       const lastUrl = await AsyncStorage.getItem(STORAGE_KEY);

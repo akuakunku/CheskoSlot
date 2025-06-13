@@ -7,15 +7,12 @@ import CustomWebView, { CustomWebViewRef } from '../components/CustomWebView';
 const STORAGE_KEY = 'LAST_TOTOSUPER_URL';
 const DEFAULT_URL = 'https://totosuper52.com/';
 
-
 export default function TotosuperScreen() {
-const [uri, setUri] = useState(DEFAULT_URL);
+  const [uri, setUri] = useState(DEFAULT_URL);
   const webViewRef = useRef<CustomWebViewRef>(null);
   const route = useRoute();
   const navigation = useNavigation();
-  const { refresh } = route.params || {};
-  
-  
+
   const fetchUrl = async () => {
     try {
       const res = await axios.get('https://raw.githubusercontent.com/chesko21/wajik777-webview/refs/heads/master/hooks/config.json');
@@ -36,8 +33,7 @@ const [uri, setUri] = useState(DEFAULT_URL);
     }
   };
 
-  
-  const handleRefresh = async () => {
+  const handleRefresh = () => {
     if (webViewRef.current) {
       webViewRef.current.reload();
     }

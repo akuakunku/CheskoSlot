@@ -12,7 +12,6 @@ export default function InterwinScreen() {
   const webViewRef = useRef<CustomWebViewRef>(null);
   const route = useRoute();
   const navigation = useNavigation();
-  const { refresh } = route.params || {};
 
   const fetchUrl = async () => {
     try {
@@ -33,9 +32,7 @@ export default function InterwinScreen() {
     }
   };
 
-
-  
-  const handleRefresh = async () => {
+  const handleRefresh = () => {
     if (webViewRef.current) {
       webViewRef.current.reload();
     }
