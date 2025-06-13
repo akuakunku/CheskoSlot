@@ -1,11 +1,9 @@
-Berikut versi **rapi dan bersih** dari README kamu, sudah diformat agar tampil baik di GitHub:
 
-````md
+
 # CheskoSlot
 
 **CheskoSlot** adalah aplikasi yang dibangun menggunakan **React Native** dan **Expo**. Aplikasi ini menyediakan berbagai fitur yang memanfaatkan kekuatan ekosistem React Native dan Expo untuk pengembangan aplikasi lintas platform.
 
----
 
 ## 🔧 Prasyarat
 
@@ -14,25 +12,21 @@ Sebelum memulai, pastikan Anda telah menginstal:
 - [Node.js](https://nodejs.org/) (disarankan versi LTS)
 - [Yarn](https://yarnpkg.com/) (versi terbaru)
 
----
+
 
 ## 🚀 Instalasi
 
 Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 
 1. **Clone repositori:**
-   ```bash
+
    git clone https://github.com/username/cheskoslot.git
    cd cheskoslot
-````
+
 
 2. **Instal dependensi dengan Yarn:**
 
-   ```bash
    yarn install
-   ```
-
----
 
 ## ▶️ Menjalankan Proyek
 
@@ -40,29 +34,24 @@ Setelah instalasi, Anda dapat menjalankan proyek dengan perintah berikut:
 
 * **Menjalankan di Android:**
 
-  ```bash
   yarn android
-  ```
+
 
 * **Menjalankan di iOS:**
 
-  ```bash
   yarn ios
-  ```
+  
 
 * **Menjalankan di Web:**
 
-  ```bash
   yarn web
-  ```
+
 
 * **Memulai server pengembangan (Expo):**
 
-  ```bash
-  yarn start
-  ```
 
----
+  yarn start
+
 
 ## 📜 Skrip yang Tersedia
 
