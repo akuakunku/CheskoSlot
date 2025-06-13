@@ -19,13 +19,18 @@ Sebelum memulai, pastikan Anda telah menginstal:
 Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 
 1. **Clone repositori:**
-    ```bash
+
+  ```bash
    git clone https://github.com/akuakunku/CheskoSlot.git
  
   ```
+-next 
 
-   ```bash
+
+  ```bash
+
    cd cheskoslot  
+
   ```
 
 2. **Instal dependensi dengan Yarn:**
