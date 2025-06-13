@@ -87,9 +87,7 @@ Kontribusi sangat disambut! Jika Anda ingin berkontribusi:
 
 Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 
----
 
-```
 
 ### Tips:
 - Pastikan nama `username` di URL git kamu sudah diganti dengan nama akun GitHub kamu.
@@ -97,4 +95,4 @@ Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 - Letakkan file ini sebagai `README.md` di root repositori GitHub.
 
 Kalau kamu ingin saya tambahkan **badge**, **tangkapan layar**, atau bagian **fitur utama**, tinggal bilang!
-```
+
