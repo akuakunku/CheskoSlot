@@ -19,14 +19,20 @@ Sebelum memulai, pastikan Anda telah menginstal:
 Ikuti langkah-langkah berikut untuk menginstal dan menjalankan proyek ini:
 
 1. **Clone repositori:**
-
+    ```bash
    git clone https://github.com/akuakunku/CheskoSlot.git
-   cd cheskoslot
+ 
+  ```
 
+   ```bash
+   cd cheskoslot  
+  ```
 
 2. **Instal dependensi dengan Yarn:**
 
+ ```bash
    yarn install
+  ```
 
 ## ▶️ Menjalankan Proyek
 
@@ -34,23 +40,31 @@ Setelah instalasi, Anda dapat menjalankan proyek dengan perintah berikut:
 
 * **Menjalankan di Android:**
 
-  yarn android
+  ```bash
+   yarn android
+  ```
 
 
 * **Menjalankan di iOS:**
 
-  yarn ios
+   ```bash
+   yarn ios
+  ```
   
 
 * **Menjalankan di Web:**
 
-  yarn web
+  ```bash
+   yarn web
+  ```
 
 
 * **Memulai server pengembangan (Expo):**
 
 
-  yarn start
+ ```bash
+   yarn start
+  ```
 
 
 ## 📜 Skrip yang Tersedia
